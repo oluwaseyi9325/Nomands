@@ -1,8 +1,7 @@
 
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
-import { FaShoppingBag, FaCreditCard, FaHeart } from "react-icons/fa";
+
 // import {
 //     DropdownMenu,
 //     DropdownMenuContent,
@@ -10,14 +9,14 @@ import { FaShoppingBag, FaCreditCard, FaHeart } from "react-icons/fa";
 //     DropdownMenuSeparator,
 //     DropdownMenuTrigger,
 // } from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+
 import { useState } from "react";
 
 
 const Header = ({ toggleSidebar, IsNotfullNav }: any) => {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to track dropdown status
+// State to track dropdown status
     const [searchQuery, setSearchQuery] = useState(""); // State to track the search input value
-    const [searchResults, setSearchResults] = useState([]); // State to store search results
+
 
 
     const handleSearchChange = (event: any) => {
