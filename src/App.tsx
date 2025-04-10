@@ -7,13 +7,14 @@ import ForgotPasswordPage from './pages/auth/forgot_password'
 import OtpPage from './pages/auth/otp_password'
 import AdminDashboardPage from './pages/admin/dashboard'
 import StudentDashboardPage from './pages/student/dashboard'
-import AdminNavbars from './pages/admin/adminWrapper'
+import Dashboard from './pages/admin/dashboard'
+// import AdminNavbars from './pages/admin/AdminWrapper'
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<AdminNavbars />} />
+        <Route path="/" element={<Dashboard/>} />
         <Route path='/signup' element={<SignupPage />} />
         <Route path='/reset' element={<ResetPasswordPage />} />
         <Route path='/forgot' element={<ForgotPasswordPage />} />

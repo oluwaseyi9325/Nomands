@@ -1,7 +1,8 @@
 
 
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import Sidenav from './_components/Navbars';
+import Header from './_components/Headers';
 
 
 
@@ -14,7 +15,7 @@ function AdminNavbars() {
     return (
         <>
             <Sidenav isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-            {/* <Header toggleSidebar={toggleSidebar} /> */}
+            <Header toggleSidebar={toggleSidebar} />
         </>
     )
 }
