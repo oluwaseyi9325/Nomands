@@ -6,13 +6,15 @@ import OtpPage from './pages/auth/otp_password'
 import AdminDashboardPage from './pages/admin/dashboard'
 import StudentDashboardPage from './pages/student/dashboard'
 import Dashboard from './pages/admin/dashboard'
+import LandingPage from './Landingpage'
 // import AdminNavbars from './pages/admin/AdminWrapper'
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Dashboard/>} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/admin" element={<Dashboard/>} />
         <Route path='/signup' element={<SignupPage />} />
         <Route path='/reset' element={<ResetPasswordPage />} />
         <Route path='/forgot' element={<ForgotPasswordPage />} />
