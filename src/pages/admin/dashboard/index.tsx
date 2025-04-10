@@ -14,7 +14,9 @@
 //           </ul>
 //         </div>
 
-import UserLayout from "../layout"
+import UserLayout from "../Layoutt"
+
+
 
   
 //         <div className="flex-1 p-6">
@@ -53,8 +55,12 @@ import UserLayout from "../layout"
 function Dashboard() {
   return (
     <UserLayout>
-      <div>Dashboard</div>
-    </UserLayout>
+      <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-2xl font-bold mb-4">Admin Dashboard</h1>
+        <p className="text-gray-600">Welcome to the admin dashboard!</p>
+        {/* Add more dashboard content here */}
+      </div>g
+   </UserLayout>
   )
 }
 
