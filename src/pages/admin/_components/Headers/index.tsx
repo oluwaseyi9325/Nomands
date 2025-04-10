@@ -34,7 +34,7 @@ const Header = ({ toggleSidebar, IsNotfullNav }: any) => {
 
     return (
         <div
-            className={`fixed top-0 left-0 ${IsNotfullNav ? "" : "md:left-64"} right-0 py-3 bg-[green] items-center lg:px-20 px-3 shadow-md flex justify-between z-50`}
+            className={`fixed top-0 left-0 ${IsNotfullNav ? "" : "md:left-64"} right-0 py-3 bg-[white] items-center lg:px-20 px-3 shadow-md flex justify-between z-50`}
         >
             <button onClick={toggleSidebar} className="md:hidden">
                 <svg

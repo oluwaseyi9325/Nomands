@@ -13,7 +13,9 @@ export default function UserLayout({
         <div className="flex flex-col min-h-screen">
 
             <AdminNavbars />
-            {children}
+           <div className="flex-1 ml-0 md:ml-64 pt-16 transition-all">
+           {children}</div>
+            
         </div>
     );
 }
