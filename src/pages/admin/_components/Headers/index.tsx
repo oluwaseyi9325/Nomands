@@ -1,33 +1,19 @@
-import { CiSearch } from "react-icons/ci";
-import { useState } from "react";
+
 import { useLocation } from "react-router-dom"; // for accessing the active route
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { FaUserCircle } from "react-icons/fa"; // Avatar icon, you can use your own image if needed
 import { Avatar } from "@/components/ui/avatar";
-import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog"; // ShadCN dialog/modal components
+// ShadCN dialog/modal components
 import SearchModal from "./SearchModal";
 
-const Header = ({ toggleSidebar, IsNotfullNav }: any) => {
-    const [searchQuery, setSearchQuery] = useState(""); // State to track the search input value
-    const [isSearchOpen, setIsSearchOpen] = useState(false); // State to manage search modal visibility
+const Header = ({ IsNotfullNav }: any) => {
+   
     const location = useLocation(); // Get current route in React
 
-    const handleSearchChange = (event: any) => {
-        setSearchQuery(event.target.value);
-    };
 
-    const handleSearchSubmit = (event: any) => {
-        event.preventDefault();
-        console.log("Search submitted for:", searchQuery);
-    };
 
-    const searchSuggestions = [
-        "Cohorts Overview",
-        "Upcoming Exams",
-        "Student Management",
-        "Exams Results",
-        "Profile Settings",
-    ]; // Dummy data for search suggestions
+
+   
 
     return (
         <div
