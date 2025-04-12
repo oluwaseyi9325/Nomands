@@ -1,7 +1,6 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend, CartesianGrid } from 'recharts';
 import { FaUserGraduate, FaLayerGroup, FaRegClipboard, FaClipboardCheck } from 'react-icons/fa';
 import { Button } from "@/components/ui/button";
-import UserLayout from "../Layoutt";
 
 const performanceData = [
   { date: 'Fri', students: 78, exams: 18 },
@@ -15,14 +14,13 @@ const performanceData = [
 
 function Dashboard() {
   return (
-    <UserLayout>
-      <div className="p-6">
+    <div className="p-20">
         <div className="flex justify-between items-center mb-6">
           <div>
             <h2 className="text-2xl font-bold text-gray-800">Welcome to Nomands Admin Dashboard</h2>
             <p className="text-gray-500 text-sm mt-1">Manage your application effectively!</p>
           </div>
-          <Button className="bg-[#009033] text-white hover:bg-[#007a2b]">+ Create Cohort</Button>
+          <Button className="bg-blue-600 text-white hover:bg-blue-700">+ Create Cohort</Button>
         </div>
 
         {/* Summary Cards */}
@@ -49,7 +47,7 @@ function Dashboard() {
           </ResponsiveContainer>
         </div>
       </div>
-    </UserLayout>
+    
   );
 }
 

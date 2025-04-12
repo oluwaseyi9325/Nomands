@@ -136,7 +136,7 @@ const Sidenav = ({ isOpen = true, toggleSidebar }: any) => {
       } md:translate-x-0 z-50`}
     >
       <div className="flex items-center pt-10 justify-center my-6">
-        <div className="p-4 text-2xl font-extrabold text-[#009033] tracking-wide">
+        <div className="p-4 text-2xl font-extrabold text-blue-600 tracking-wide">
           Nomands
         </div>
       </div>
@@ -207,7 +207,7 @@ const SidebarItem = ({ icon, text, path, currentPath }: any) => {
   return (
     <li
       className={`flex items-center gap-2 py-2 px-3 rounded-lg w-full transition-colors duration-200 ${
-        isActive ? 'bg-[#009033] text-white' : 'hover:bg-gray-100'
+        isActive ? 'bg-blue-600 text-white' : 'hover:bg-gray-100'
       }`}
     >
       {icon}

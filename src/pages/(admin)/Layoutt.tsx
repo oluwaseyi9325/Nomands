@@ -1,9 +1,5 @@
+import { Outlet } from "react-router-dom";
 import AdminNavbars from "./AdminWrappers";
-
-
-
-
-
 export default function UserLayout({
     children,
 }: Readonly<{
@@ -11,10 +7,11 @@ export default function UserLayout({
 }>) {
     return (
         <div className="flex flex-col min-h-screen">
-
             <AdminNavbars />
            <div className="flex-1 ml-0 md:ml-64 pt-16 transition-all">
-           {children}</div>
+                {/* {children} */}
+                <Outlet/>
+            </div>
             
         </div>
     );
