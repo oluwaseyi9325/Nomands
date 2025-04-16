@@ -13,13 +13,6 @@ import {
   DialogFooter,
 } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectTrigger,
-  SelectItem,
-  SelectContent,
-  SelectValue,
-} from '@/components/ui/select';
 import { Pencil, Trash2 } from 'lucide-react';
 import * as XLSX from 'xlsx';
 

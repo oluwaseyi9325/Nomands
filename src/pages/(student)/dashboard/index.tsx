@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { CalendarDays, Mail, Phone, User, LineChart, GraduationCap } from 'lucide-react';
+import {  Mail, Phone, User, LineChart, GraduationCap } from 'lucide-react';
 import { format } from 'date-fns';
 import {
   LineChart as ReLineChart,
