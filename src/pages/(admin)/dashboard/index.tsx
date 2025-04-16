@@ -14,7 +14,7 @@ const performanceData = [
 
 function Dashboard() {
   return (
-    <div className="p-20">
+    <div className="p-5 mt-10">
         <div className="flex justify-between items-center mb-6">
           <div>
             <h2 className="text-2xl font-bold text-gray-800">Welcome to Nomands Admin Dashboard</h2>

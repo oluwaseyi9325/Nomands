@@ -7,7 +7,7 @@ const SignupPage = lazy(() => import('../pages/(auth)/signup'))
 const ResetPasswordPage = lazy(() => import('../pages/(auth)/Reset_password'))
 const ForgotPasswordPage = lazy(() => import('../pages/(auth)/forgot_password'))
 const OtpPage = lazy(() => import('../pages/(auth)/otp_password'))
-const LandingPage = lazy(() => import('../Landingpage'))
+const LandingPage = lazy(() => import('../pages/(landingpages)/Home/Landingpage'))
 
 const publicRoutes = (
   <>
