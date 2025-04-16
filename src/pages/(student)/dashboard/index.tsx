@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import {  Mail, Phone, User, LineChart, GraduationCap } from 'lucide-react';
+import { Mail, Phone, User, LineChart, GraduationCap } from 'lucide-react';
 import { format } from 'date-fns';
 import {
   LineChart as ReLineChart,
@@ -88,8 +88,8 @@ const StudentDashboardPage = () => {
   };
 
   return (
-    <div className="p-6 space-y-6 bg-gray-50 min-h-screen">
-      <div className="text-3xl font-bold text-gray-800">
+    <div className="px-4 md:px-6 py-6 space-y-6 bg-gray-50 min-h-screen">
+      <div className="text-2xl md:text-3xl font-bold text-gray-800">
         Hi {student.name.split(' ')[0]}, How are you doing? 👋
         <p className="text-base text-gray-600 mt-1">
           We’re glad to have you back today!
@@ -97,16 +97,16 @@ const StudentDashboardPage = () => {
       </div>
 
       {/* Student Profile */}
-      <Card className="p-6 flex flex-col md:flex-row items-start md:items-center gap-6 shadow-md rounded-xl bg-white">
+      <Card className="p-4 md:p-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 shadow-md rounded-xl bg-white">
         <Avatar className="w-20 h-20 ring-2 ring-blue-500">
           <AvatarImage src={student.profileImage} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
 
         <div className="flex-1 space-y-2 w-full">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div>
-              <h2 className="text-2xl font-semibold text-gray-900 flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl font-semibold text-gray-900 flex items-center gap-2">
                 <User className="w-5 h-5 text-blue-600" />
                 {student.name}
               </h2>
@@ -133,10 +133,14 @@ const StudentDashboardPage = () => {
                 <Label>Phone</Label>
                 <Input name="phone" value={student.phone} onChange={handleEditChange} />
               </div>
-              <Button onClick={handleSave}>Save</Button>
+              <div className="md:col-span-2">
+                <Button onClick={handleSave} className="w-full md:w-auto">
+                  Save
+                </Button>
+              </div>
             </div>
           ) : (
-            <div className="text-gray-600 mt-2">
+            <div className="text-gray-600 mt-2 space-y-1">
               <p>
                 <Mail className="inline w-4 h-4 mr-1" />
                 {student.email}
@@ -154,13 +158,13 @@ const StudentDashboardPage = () => {
       </Card>
 
       {/* Latest Cohorts */}
-      <Card className="p-6 shadow-md rounded-xl bg-white">
-        <div className="flex justify-between items-center mb-4">
+      <Card className="p-4 md:p-6 shadow-md rounded-xl bg-white">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-4">
           <h3 className="text-lg font-semibold text-blue-700 flex items-center gap-2">
             <GraduationCap className="w-5 h-5" />
             Your Cohorts
           </h3>
-          <Button variant="link" className="text-sm text-blue-600 underline">
+          <Button variant="link" className="text-sm text-blue-600 underline p-0 h-auto">
             View All Cohorts
           </Button>
         </div>
@@ -186,7 +190,7 @@ const StudentDashboardPage = () => {
       </Card>
 
       {/* Performance Chart */}
-      <Card className="p-6 shadow-md rounded-xl bg-white">
+      <Card className="p-4 md:p-6 shadow-md rounded-xl bg-white">
         <h3 className="text-lg font-semibold text-green-700 mb-4 flex items-center gap-2">
           <LineChart className="w-5 h-5" />
           Performance Overview
@@ -205,9 +209,9 @@ const StudentDashboardPage = () => {
       {/* Register Cohort Trigger & Modal */}
       <Dialog>
         <DialogTrigger asChild>
-          <Button className="w-full md:w-auto">Register for New Cohort</Button>
+          <Button className="w-full sm:w-auto">Register for New Cohort</Button>
         </DialogTrigger>
-        <DialogContent className="p-6 max-w-md">
+        <DialogContent className="p-6 max-w-md w-full">
           <h3 className="text-lg font-semibold mb-4">Register New Cohort</h3>
           <div className="space-y-4">
             <div>

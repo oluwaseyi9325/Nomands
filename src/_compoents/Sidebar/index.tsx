@@ -10,7 +10,7 @@ const Sidebar = ({ isOpen = true, toggleSidebar, role }: any) => {
 
   return (
     <div
-      className={`fixed flex flex-col top-0 left-0 h-full w-64 bg-white p-3 shadow-lg transition-transform transform ${
+      className={`fixed flex flex-col top-0 left-0 h-full w-64 bg-blue-10 p-3 shadow-lg transition-transform transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } md:translate-x-0 z-50`}
     >
@@ -86,7 +86,7 @@ const Sidebar = ({ isOpen = true, toggleSidebar, role }: any) => {
                 />
                 <SidebarItem
                   icon={<FaUserGraduate color={getColor(pathname, '/student/my-cohort')} size={20} />}
-                  path="/student/my-cohort"
+                  path="/student/mycohort"
                   text="My Cohort"
                   currentPath={pathname}
                 />

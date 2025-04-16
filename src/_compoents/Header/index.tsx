@@ -14,7 +14,7 @@ const routeTitles: Record<string, string> = {
   "/admin/settings": "Settings",
 };
 
-const Header = ({ IsNotfullNav }: any) => {
+const Header = ({ IsNotfullNav, toggleSidebar }: any) => {
   const location = useLocation();
   const { pathname } = location;
 
@@ -29,15 +29,31 @@ const Header = ({ IsNotfullNav }: any) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 ${IsNotfullNav ? "" : "md:left-64"} right-0 py-3 bg-white items-center lg:px-20 px-3 shadow-md flex justify-between z-50`}
+      className={`fixed top-0 left-0 ${IsNotfullNav ? "" : "md:left-64"} right-0 py-3 bg-blue-10 items-center lg:px-20 px-3 shadow-md flex justify-between z-50`}
     >
+      <button onClick={toggleSidebar} className="md:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
       {/* Left side: Page Title */}
       <div className="">
         <h3 className="text-xl font-semibold text-gray-800">{getTitle(pathname)}</h3>
       </div>
 
       {/* Middle: Search */}
-      <SearchModal />
+      {/* <SearchModal /> */}
 
       {/* Right side: Avatar Dropdown */}
       <div className="flex items-center justify-between gap-2">
