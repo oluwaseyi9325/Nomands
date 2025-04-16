@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';  // Assuming you have a custom Avatar component
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog';
-import { Pencil, Trash2, User, CheckCircle, XCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import {  Trash2, User, CheckCircle, XCircle } from 'lucide-react';
+
 
 const StudentListPage = () => {
   const [students, setStudents] = useState([
