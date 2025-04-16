@@ -1,4 +1,4 @@
-import AdminNavbars from '@/pages/(admin)/AdminWrappers'
+import PageLayout from '@/_compoents/layout'
 import AllCohortsPage from '@/pages/(student)/mycohort'
 import ViewCohortPage from '@/pages/(student)/mycohort/viewCohort'
 import { lazy } from 'react'
@@ -8,10 +8,10 @@ import { Route } from 'react-router-dom'
 const StudentDashboardPage = lazy(() => import('../pages/(student)/dashboard'))
 
 const studentRoutes = (
-  <Route element={<AdminNavbars />}>
-    <Route path="/user" element={<StudentDashboardPage />} />
-    <Route path="/all-cohort" element={<AllCohortsPage />} />
-    <Route path="/view" element={<ViewCohortPage />} />
+  <Route path='student' element={<PageLayout role="student"/>}>
+    <Route index element={<StudentDashboardPage />} />
+    <Route path="mycohort" element={<AllCohortsPage />} />
+    <Route path="view" element={<ViewCohortPage />} />
   </Route>
 )
 
