@@ -3,6 +3,7 @@
 import { Card } from '@/components/ui/card';
 import { format } from 'date-fns';
 import { GraduationCap, Layers3, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const allCohorts = [
     {
@@ -44,126 +45,6 @@ const allCohorts = [
       mentor: 'Ms. Grace',
       description: 'Understand user behavior and craft intuitive design experiences.',
       modules: 7,
-    },
-    {
-      id: 'SE-SEP25',
-      name: 'Software Engineering - September 2025',
-      startDate: '2025-09-01',
-      mentor: 'Engr. John',
-      description: 'Fullstack engineering covering both frontend and backend systems.',
-      modules: 14,
-    },
-    {
-      id: 'CY-OCT25',
-      name: 'Cybersecurity - October 2025',
-      startDate: '2025-10-10',
-      mentor: 'Dr. Linda',
-      description: 'Protect systems, networks, and data from cyber threats.',
-      modules: 11,
-    },
-    {
-      id: 'ML-NOV25',
-      name: 'Machine Learning - November 2025',
-      startDate: '2025-11-12',
-      mentor: 'Dr. Okon',
-      description: 'Build predictive models and intelligent systems with ML.',
-      modules: 13,
-    },
-    {
-      id: 'PM-DEC25',
-      name: 'Product Management - December 2025',
-      startDate: '2025-12-03',
-      mentor: 'Ms. Faith',
-      description: 'Learn product discovery, development lifecycle, and go-to-market strategies.',
-      modules: 9,
-    },
-    {
-      id: 'WD-JAN26',
-      name: 'Web Development - January 2026',
-      startDate: '2026-01-09',
-      mentor: 'Mr. Tunde',
-      description: 'Frontend and backend development using MERN stack.',
-      modules: 10,
-    },
-    {
-      id: 'DM-FEB26',
-      name: 'Digital Marketing - February 2026',
-      startDate: '2026-02-14',
-      mentor: 'Ms. Zainab',
-      description: 'SEO, social media, content, and email marketing strategies.',
-      modules: 6,
-    },
-    {
-      id: 'CE-MAR26',
-      name: 'Cloud Engineering - March 2026',
-      startDate: '2026-03-02',
-      mentor: 'Engr. Paul',
-      description: 'Deploy and manage applications on AWS, Azure, and GCP.',
-      modules: 10,
-    },
-    {
-      id: 'BX-APR26',
-      name: 'Blockchain Engineering - April 2026',
-      startDate: '2026-04-07',
-      mentor: 'Mr. Musa',
-      description: 'Smart contracts, dApps, and decentralized systems.',
-      modules: 8,
-    },
-    {
-      id: 'DS-MAY26',
-      name: 'Data Science - May 2026',
-      startDate: '2026-05-04',
-      mentor: 'Dr. Smith',
-      description: 'Apply statistical analysis and machine learning on real datasets.',
-      modules: 12,
-    },
-    {
-      id: 'IOT-JUN26',
-      name: 'Internet of Things - June 2026',
-      startDate: '2026-06-18',
-      mentor: 'Prof. Bello',
-      description: 'Connect physical devices and control them via software.',
-      modules: 9,
-    },
-    {
-      id: 'UX-JUL26',
-      name: 'User Experience Design - July 2026',
-      startDate: '2026-07-20',
-      mentor: 'Ms. Grace',
-      description: 'Design user-centered digital interfaces with Figma and usability testing.',
-      modules: 7,
-    },
-    {
-      id: 'QA-AUG26',
-      name: 'Quality Assurance - August 2026',
-      startDate: '2026-08-15',
-      mentor: 'Mr. Johnson',
-      description: 'Manual and automated testing with Selenium and Postman.',
-      modules: 6,
-    },
-    {
-      id: 'AR-SEP26',
-      name: 'Augmented Reality - September 2026',
-      startDate: '2026-09-08',
-      mentor: 'Dr. Adeyemi',
-      description: 'Create immersive experiences with ARKit and Unity.',
-      modules: 10,
-    },
-    {
-      id: 'VC-OCT26',
-      name: 'Venture Creation - October 2026',
-      startDate: '2026-10-10',
-      mentor: 'Ms. Funmi',
-      description: 'Start and grow a tech-based business with startup principles.',
-      modules: 5,
-    },
-    {
-      id: 'DS-NOV26',
-      name: 'Data Structures & Algorithms - November 2026',
-      startDate: '2026-11-12',
-      mentor: 'Mr. David',
-      description: 'Ace technical interviews with DSA mastery.',
-      modules: 10,
     },
   ];
   
@@ -222,14 +103,14 @@ const AllCohortsPage = () => {
                                     </div>
                                 </div>
 
-                                <button
-                                    className={`mt-4 px-4 py-2 text-sm rounded-md font-medium ${isEnrolled
+                                <Link to={`${cohort.id}`}
+                                    className={`mt-4 px-4 py-2 text-center text-sm rounded-md font-medium ${isEnrolled
                                             ? 'bg-green-600 text-white hover:bg-green-700'
                                             : 'bg-blue-600 text-white hover:bg-blue-700'
                                         }`}
                                 >
                                     {isEnrolled ? 'Continue Cohort' : 'View'}
-                                </button>
+                                </Link>
                             </Card>
                         </div>
                     );

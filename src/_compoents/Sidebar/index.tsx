@@ -5,20 +5,18 @@ import { FaRegListAlt, FaChartBar, FaUserGraduate } from 'react-icons/fa';
 import { BsQuestionSquare } from 'react-icons/bs';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
-const Sidebar = ({ isOpen = true, toggleSidebar, role }: any) => {
+const Sidebar = ({ isOpen, toggleSidebar, role }: any) => {
   const { pathname } = useLocation();
 
   return (
     <div
-      className={`fixed flex flex-col top-0 left-0 h-full w-64 bg-blue-10 p-3 shadow-lg transition-transform transform ${
+      className={`fixed flex flex-col bg-white top-0 left-0 h-full w-64 bg-blue-10 p-3 shadow-lg transition-transform transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } md:translate-x-0 z-50`}
     >
       {/* Brand */}
-      <div className="flex items-center pt-10 justify-center my-6">
-        <div className="p-4 text-2xl font-extrabold text-blue-600 tracking-wide">
-          Nomands
-        </div>
+      <div className="flex i pt-20 lg:pt-10 justify-center mb-10">
+      <img src='/public/logo.png' className='w-[140px] rounded bg-white p-2' alt='logo image'/>
       </div>
 
       {/* Scrollable Navigation */}
@@ -114,11 +112,11 @@ const Sidebar = ({ isOpen = true, toggleSidebar, role }: any) => {
       </div>
 
       {/* Close Button (Mobile) */}
-      <button onClick={toggleSidebar} className="absolute top-8 right-4 md:hidden text-black">
+      {/* <button onClick={toggleSidebar} className="absolute top-8 right-4 md:hidden text-black">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
-      </button>
+      </button> */}
     </div>
   );
 };

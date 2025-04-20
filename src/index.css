@@ -124,5 +124,8 @@
   @apply w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
 }
 .inputLabel{
-  @apply w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+  @apply text-sm font-medium text-gray-700
+}
+.btn{
+  @apply w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition
 }

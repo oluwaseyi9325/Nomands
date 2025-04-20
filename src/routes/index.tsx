@@ -3,6 +3,7 @@ import { Suspense } from 'react'
 import publicRoutes from './publicRoutes'
 import adminRoutes from './adminRoutes'
 import studentRoutes from './studentRoutes'
+import authRoutes from './authRoutes'
 
 
 const AppRoutes = () => {
@@ -12,6 +13,7 @@ const AppRoutes = () => {
         {publicRoutes}
         {adminRoutes}
         {studentRoutes}
+        {authRoutes}
       </Routes>
     </Suspense>
   )

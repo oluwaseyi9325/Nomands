@@ -12,6 +12,9 @@ const routeTitles: Record<string, string> = {
   "/admin/questions": "Questions",
   "/admin/results": "Results",
   "/admin/settings": "Settings",
+  "/student": "Dashboard",
+  "/student/mycohort": "My Cohort",
+ 
 };
 
 const Header = ({ IsNotfullNav, toggleSidebar }: any) => {
@@ -29,7 +32,7 @@ const Header = ({ IsNotfullNav, toggleSidebar }: any) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 ${IsNotfullNav ? "" : "md:left-64"} right-0 py-3 bg-blue-10 items-center lg:px-20 px-3 shadow-md flex justify-between z-50`}
+      className={`fixed top-0 left-0 ${IsNotfullNav ? "" : "md:left-64"} right-0 py-3 bg-blue-10 items-center lg:px-5 px-3 shadow-md flex justify-between z-50`}
     >
       <button onClick={toggleSidebar} className="md:hidden">
         <svg

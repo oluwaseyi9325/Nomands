@@ -18,6 +18,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import SpinnerOverlay from '@/_compoents/SpinnerOverlay';
 
 const performanceData = [
   { week: 'Week 1', score: 75 },
@@ -88,6 +89,8 @@ const StudentDashboardPage = () => {
   };
 
   return (
+    <>
+      <SpinnerOverlay isLoading={false} />
     <div className="px-4 md:px-6 py-6 space-y-6 bg-gray-50 min-h-screen">
       <div className="text-2xl md:text-3xl font-bold text-gray-800">
         Hi {student.name.split(' ')[0]}, How are you doing? 👋
@@ -237,6 +240,7 @@ const StudentDashboardPage = () => {
         </DialogContent>
       </Dialog>
     </div>
+    </>
   );
 };
 
