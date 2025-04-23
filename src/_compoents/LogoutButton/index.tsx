@@ -1,12 +1,11 @@
-// src/components/LogoutButton.js
-import React from 'react';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
-import useUserStore from '../store/userStore';
+import useUserStore from '@/store/store';
+
 
 const LogoutButton = () => {
   const navigate = useNavigate();
-  const clearUser = useUserStore((state) => state.clearUser);  // Zustand clearUser function
+  const clearUser = useUserStore((state:any) => state.clearUser);  // Zustand clearUser function
 
   const handleLogout = () => {
     // Remove token from cookies

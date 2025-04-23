@@ -1,9 +1,10 @@
 // src/routes/RouteGuard.jsx
+import useUserStore from '@/store/store'
 import { Navigate, Outlet } from 'react-router-dom'
-import useUserStore from '@/store/userStore'
 
-const RouteGuard = ({ role }) => {
-  const userRole = useUserStore((state) => state.role)
+
+ const RouteGuard = ({ role }:any) => {
+  const userRole = useUserStore((state:any) => state.role)
 
   if (userRole !== role) {
     return <Navigate to="/" replace />
@@ -12,4 +13,6 @@ const RouteGuard = ({ role }) => {
   return <Outlet />
 }
 
-export default RouteGuard
+export default RouteGuard;
+
+

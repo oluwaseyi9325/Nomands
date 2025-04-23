@@ -2,18 +2,26 @@ import Footer from '@/_compoents/Footer';
 import Teams from '@/_compoents/Teams';
 import Banner from '@/_compoents/Banner.tsx';
 import Navbar from '@/_compoents/Navbar';
+import { useTanstackCustom } from '@/api/useTanstackCustom';
 
 const LandingPage = () => {
+
+  const { data, isLoading, error } = useTanstackCustom({
+    key: 'users',
+    url: 'post',
+  })
+
+  console.log('data', data, error?.message, isLoading);
 
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col font-sans">
       {/* Navbar */}
-    <Navbar/>
+      <Navbar />
 
 
 
       {/* Banner Section */}
-      <Banner/>
+      <Banner />
 
       {/* Features Section */}
       <section className="py-12 sm:py-16 bg-gray-100 text-center">
