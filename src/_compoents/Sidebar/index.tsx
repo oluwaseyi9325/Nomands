@@ -5,7 +5,7 @@ import { FaRegListAlt, FaChartBar, FaUserGraduate } from 'react-icons/fa';
 import { BsQuestionSquare } from 'react-icons/bs';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
-const Sidebar = ({ isOpen, toggleSidebar, role }: any) => {
+const Sidebar = ({ isOpen, role }: any) => {
   const { pathname } = useLocation();
 
   return (

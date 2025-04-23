@@ -1,16 +1,16 @@
 import PageLayout from '@/_compoents/layout'
+import { ROLES } from '@/constants/roles'
 import AllCohortsPage from '@/pages/(student)/mycohort'
 import ViewCohortPage from '@/pages/(student)/mycohort/viewCohort'
 import { lazy } from 'react'
 import { Route } from 'react-router-dom'
-import RouteGuard from './RouteGuard'
-import { ROLES } from '@/constants/roles'
+
 
 const StudentDashboardPage = lazy(() => import('../pages/(student)/dashboard'))
-
+// element={<RouteGuard role={ROLES.STUDENT} />}
 const studentRoutes = (
-  <Route element={<RouteGuard role={ROLES.STUDENT} />}>
-     <Route path='student' element={<PageLayout role="student"/>}>
+  <Route >
+    <Route path='student' element={<PageLayout role={ROLES.STUDENT} />}>
     <Route index element={<StudentDashboardPage />} />
     <Route path="mycohort" element={<AllCohortsPage />} />
     <Route path="mycohort/:id" element={<ViewCohortPage />} />

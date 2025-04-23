@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { FaUserCircle } from "react-icons/fa";
 import { Avatar } from "@/components/ui/avatar";
-import SearchModal from "./SearchModal";
+// import SearchModal from "./SearchModal";
 
 // Route title mapping
 const routeTitles: Record<string, string> = {
