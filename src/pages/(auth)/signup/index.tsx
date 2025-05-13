@@ -24,7 +24,7 @@ export default function SignupPage() {
 
     console.log(values)
     try {
-      const response = await axiosInstance.post('signup', values)
+      const response = await axiosInstance.post('register', values)
       console.log('Signup successful:', response.data)
     } catch (error) {
       console.error('Error signing up:', error)

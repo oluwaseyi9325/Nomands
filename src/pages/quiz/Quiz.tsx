@@ -55,7 +55,7 @@ export default function Quiz() {
 
   return (
     <div className="max-w-3xl mx-auto mt-10 p-6 shadow rounded bg-white">
-      <Timer duration={60 * 5} onTimeUp={handleSubmit} />
+      <Timer duration={60 * 30} onTimeUp={handleSubmit} />
 
       {/* Email input */}
       <div className="mb-4">
