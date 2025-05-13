@@ -6,7 +6,8 @@ import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(),
+  plugins: [react(), tailwindcss(), TanStackRouterVite({ target: 'react', autoCodeSplitting: true }) as unknown as PluginOption,
+    
     VitePWA({ 
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
@@ -40,7 +41,7 @@ export default defineConfig({
         ],
       }, 
     })
-    ,TanStackRouterVite({ target: 'react', autoCodeSplitting: true }) as unknown as PluginOption],
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

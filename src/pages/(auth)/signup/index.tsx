@@ -5,6 +5,7 @@ import { Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Link } from 'react-router-dom'
+import axiosInstance from '@/utilities/axiosInstance'
 
 const SignupSchema = Yup.object().shape({
   firstName: Yup.string().required('First name is required'),
@@ -19,19 +20,28 @@ const SignupSchema = Yup.object().shape({
 export default function SignupPage() {
   const [showPassword, setShowPassword] = useState(false)
 
+  const onSubmit = async (values: any) => {
+
+    console.log(values)
+    try {
+      const response = await axiosInstance.post('signup', values)
+      console.log('Signup successful:', response.data)
+    } catch (error) {
+      console.error('Error signing up:', error)
+    }
+  }
+
   return (
     <Formik
       initialValues={{
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
+        firstName: 'Seyi',
+        lastName: 'Adedokun',
+        email: 'adedokunseyi96@gmail.com',
+        password: 'Seyi2004.',
+        confirmPassword: 'Seyi2004.',
       }}
       validationSchema={SignupSchema}
-      onSubmit={(values) => {
-        console.log(values)
-      }}
+      onSubmit={onSubmit}
     >
       {({ handleSubmit }) => (
         <Form onSubmit={handleSubmit} className="space-y-6">

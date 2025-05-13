@@ -9,9 +9,9 @@ const AuthLayout = () => {
           <div className="flex justify-center">
           <img src='/public/logo.png' className='w-[150px] mb-6  rounded bg-white p-2' alt='logo image'/>
           </div>
-          <form>
+          <div>
             <Outlet/>
-          </form>
+          </div>
         </div>
       </div>
     );
