@@ -13,7 +13,7 @@ const LandingPage = lazy(() => import('../pages/(landingpages)/Home/Landingpage'
 const publicRoutes = (
   <>
     <Route path="/" element={<LandingPage />} />
-    <Route path="/contact" element={<Contact />} />
+    <Route path="/contactss" element={<Contact />} />
     <Route path="/quiz" element={<Quiz />} />
     <Route path="/quiz-pass" element={<Passcode />} />
     <Route path="/quiz-unauthorized" element={<Unauthorized />} />
