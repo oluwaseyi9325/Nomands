@@ -14,7 +14,7 @@ const publicRoutes = (
   <>
     <Route path="/" element={<LandingPage />} />
     <Route path="/contact" element={<Contact />} />
-    <Route path="/quiz" element={<Quiz />} />
+    <Route path="/quiz-start" element={<Quiz />} />
     <Route path="/quiz-js" element={<Passcode />} />
     <Route path="/quiz-unauthorized" element={<Unauthorized />} />
     <Route path="/devices" element={<DeviceTypeCheck />} />
