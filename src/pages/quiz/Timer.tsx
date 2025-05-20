@@ -12,5 +12,5 @@ export default function Timer({ duration, onTimeUp }:any) {
   }, [timeLeft]);
 
   const format = (s:any) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
-  return <div className="text-right text-red-600 font-bold">Time Left: {format(timeLeft)}</div>;
+  return <div className="text-right  p-4 rounded font-bold text-red-600">Time Left: {format(timeLeft)}</div>;
 }
